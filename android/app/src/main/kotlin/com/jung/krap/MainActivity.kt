@@ -1,0 +1,5 @@
+package com.jung.krap
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()
