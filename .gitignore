@@ -1,45 +1,98 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.build/
-.buildlog/
-.history
-.svn/
-.swiftpm/
-migrate_working_dir/
-
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
-
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
+# -------------------------------
+# Flutter/Dart 기본 설정
+# -------------------------------
 .dart_tool/
+.packages
+.pub-cache/
+.buildlog/
 .flutter-plugins
 .flutter-plugins-dependencies
-.pub-cache/
-.pub/
-/build/
+.melos_tool/
+.melos_workspace/
 
-# Symbolication related
-app.*.symbols
+# -------------------------------
+# iOS
+# -------------------------------
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/.symlinks/
+ios/Pods/
+ios/Runner.xcworkspace/
+ios/DerivedData/
+ios/.dart_tool/
+ios/Flutter/App.framework
+ios/Flutter/engine/
+ios/Flutter/*.xcframework
+*.podspec
 
-# Obfuscation related
-app.*.map.json
+# Xcode 자동 생성 파일
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+*.xccheckout
+*.xcodeproj/*
+!ios/Runner.xcodeproj/project.pbxproj
+!ios/Runner.xcodeproj/xcshareddata/
+*.xcworkspace
+!ios/Runner.xcworkspace/contents.xcworkspacedata
+!ios/Runner.xcworkspace/xcshareddata/
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# -------------------------------
+# Android
+# -------------------------------
+android/.gradle/
+android/captures/
+android/.idea/
+android/local.properties
+**/gradle-wrapper.jar
+android/app/build/
+*.iml
+
+# -------------------------------
+# macOS
+# -------------------------------
+macos/Flutter/ephemeral/
+macos/Pods/
+macos/.symlinks/
+macos/build/
+*.xcworkspace
+*.xcodeproj
+macos/Runner.xcworkspace/
+macos/Runner.xcodeproj/
+
+# -------------------------------
+# Windows
+# -------------------------------
+windows/flutter/ephemeral/
+windows/.dart_tool/
+windows/build/
+
+# -------------------------------
+# Web
+# -------------------------------
+web/.dart_tool/
+web/build/
+
+# -------------------------------
+# 기타
+# -------------------------------
+.idea/
+.vscode/
+*.iml
+*.log
+*.tmp
+*.swp
+*.DS_Store
+*.bak
+*.orig
+*.rej
+
+# -------------------------------
+# Generated files
+# -------------------------------
+*.g.dart
+*.freezed.dart
+*.mocks.dart
+*.gr.dart
+*.injectable.dart
