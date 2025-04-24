@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:krap/util/app_logger.dart';
-import 'package:krap/util/util.dart';
+import 'package:krap/core/util/app_logger.dart';
+import 'package:krap/core/util/util.dart';
 
 class CustomLogInterceptor extends LogInterceptor {
   @override
