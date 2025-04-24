@@ -87,6 +87,9 @@ web/build/
 *.bak
 *.orig
 *.rej
+*.cmake
+*.cc
+*.h
 
 # -------------------------------
 # Generated files
