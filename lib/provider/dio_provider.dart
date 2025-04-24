@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:krap/repository/http/CustomLogInterceptor.dart';
+import 'package:krap/repository/http/custom_log_interceptor.dart';
 
 final dioProvider = Provider<Dio>((ref) {
   Dio dio = Dio(BaseOptions(
