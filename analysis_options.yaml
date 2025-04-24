@@ -1,3 +1,4 @@
+include: package:very_good_analysis/analysis_options.yaml
 linter:
   rules:
     - always_declare_return_types
@@ -32,6 +33,7 @@ linter:
     - unnecessary_final
     - unnecessary_parenthesis
     - use_key_in_widget_constructors
+    - public_member_api_docs: false
 analyzer:
   strong-mode:
     implicit-casts: false
