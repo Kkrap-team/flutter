@@ -1,7 +1,6 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:krap/provider/user_provider.dart';
+import 'package:krap/provider/folders_provider.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -96,7 +95,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final userAsync = ref.watch(userProvider(8)); // userId = 1
+    final userAsync = ref.watch(foldersProvider(8)); // userId = 1
 
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
@@ -121,7 +120,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
           });
 
           // 🔥 버튼 눌렀을 때 유저 정보 다시 가져오기 (재요청)
-          ref.invalidate(userProvider(1));
+          ref.invalidate(foldersProvider(1));
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
