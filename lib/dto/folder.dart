@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'Folder.g.dart'; // 이게 있어야 build_runner가 연결 가능
+part 'folder.g.dart';
 
 @JsonSerializable()
 class Folder {
