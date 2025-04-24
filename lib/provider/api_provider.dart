@@ -1,9 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:krap/provider/dio_provider.dart';
-import 'package:krap/repository/http/http_client.dart';
+import 'package:krap/repository/folder/folder_api.dart';
 
-final httpClientProvider = Provider<HttpClient>((ref) {
+final folderApiProvider = Provider<FolderApi>((ref) {
   final dio = ref.watch(dioProvider);
-  return HttpClient(dio);
+  return FolderApi(dio);
 });
 
