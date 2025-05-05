@@ -1,9 +1,14 @@
+import java.util.Properties
+
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
+
+
 
 android {
     namespace = "com.jung.krap"
@@ -28,7 +33,15 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+
+        val properties = Properties().apply {
+            load(rootProject.file("local.properties").inputStream())
+        }
+
+        manifestPlaceholders["kakaoApiKey"] = properties.getProperty("kakaoApiKey")
+
     }
+
 
     buildTypes {
         release {
