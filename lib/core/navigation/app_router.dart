@@ -9,4 +9,12 @@ class AppRouter {
   static void goTutorial(BuildContext context) {
     Navigator.pushNamed(context, RoutePaths.tutorial);
   }
+
+  static void goHome(BuildContext context) {
+    Navigator.pushNamed(context, RoutePaths.home);
+  }
+
+  static void replaceHome(BuildContext context) {
+    Navigator.pushReplacementNamed(context, RoutePaths.home);
+  }
 }
