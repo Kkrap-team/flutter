@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:krap/dto/folder.dart';
-import 'package:krap/provider/repo_provider.dart';
+import 'package:krap/common/dto/folder.dart';
+import 'package:krap/common/provider/repo_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'folders_provider.g.dart';
