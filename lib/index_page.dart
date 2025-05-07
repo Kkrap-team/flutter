@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
 import 'package:krap/core/navigation/app_router.dart';
+import 'package:krap/core/util/app_logger.dart';
 
 class IndexPage extends ConsumerWidget {
   @override
@@ -21,7 +23,10 @@ class IndexPage extends ConsumerWidget {
                     AppRouter.goLogin(context);
                   }),
                 ),
-                Expanded(child: SquareTextButton("", () {})),
+                Expanded(child: SquareTextButton("getKeyHash", () async {
+                  String keyHash = await KakaoSdk.origin;
+                  AppLogger.d('키 해시: $keyHash');
+                })),
                 Expanded(child: SquareTextButton("", () {})),
               ],
             ),

@@ -50,4 +50,16 @@ class TextStyles {
     fontWeight: FontWeight.w700,
     color: AppColor.AppColors.primary,
   );
+  static TextStyle bold30Black = const TextStyle(
+    fontFamily: 'NotoSans',
+    fontSize: 30,
+    fontWeight: FontWeight.w700,
+    color: AppColor.AppColors.black,
+  );
+  static TextStyle bold30Primary = const TextStyle(
+    fontFamily: 'NotoSans',
+    fontSize: 30,
+    fontWeight: FontWeight.w700,
+    color: AppColor.AppColors.primary,
+  );
 }
