@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:krap/dto/folder.dart';
+import 'package:krap/common/dto/folder.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'folder_api.g.dart';
