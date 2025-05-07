@@ -1,4 +1,4 @@
-import 'package:krap/common/dto/folder.dart';
+import 'package:krap/dto/folder.dart';
 import 'package:krap/repository/folder/folder_api.dart';
 
 class FolderRepository {
