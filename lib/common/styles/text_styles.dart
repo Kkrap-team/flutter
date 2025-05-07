@@ -2,6 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:krap/common/styles/app_colors.dart' as AppColor;
 
 class TextStyles {
+  static TextStyle regular10grey = const TextStyle(
+    fontFamily: 'NotoSans',
+    fontSize: 10,
+    fontWeight: FontWeight.w400,
+    color: AppColor.AppColors.grey757575,
+  );
+  static TextStyle regular10primary = const TextStyle(
+    fontFamily: 'NotoSans',
+    fontSize: 10,
+    fontWeight: FontWeight.w400,
+    color: AppColor.AppColors.primary,
+  );
   static TextStyle semiBold14Black = const TextStyle(
     fontFamily: 'NotoSans',
     fontSize: 14,
