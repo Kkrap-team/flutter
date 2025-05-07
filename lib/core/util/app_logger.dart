@@ -1,14 +1,13 @@
 import 'package:flutter/foundation.dart';
+import 'package:krap/core/util/custom_log_printer.dart';
 import 'package:logger/logger.dart';
 
 class AppLogger {
   static final Logger _logger = Logger(
-    printer: PrettyPrinter(
-      methodCount: 1,
-      colors: true,
-      printEmojis: true,
-    ),
+    printer: CustomLogPrinter(),
+    // level: kReleaseMode ? Level.nothing : Level.debug,
   );
+
   static void v(message, {String tag = 'Krap'}) {
     if (!kReleaseMode) _logger.v(_format(message, tag));
   }
