@@ -5,7 +5,6 @@ import 'package:logger/logger.dart';
 class AppLogger {
   static final Logger _logger = Logger(
     printer: CustomLogPrinter(),
-    // level: kReleaseMode ? Level.nothing : Level.debug,
   );
 
   static void v(message, {String tag = 'Krap'}) {
