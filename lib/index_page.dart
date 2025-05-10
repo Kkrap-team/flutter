@@ -27,7 +27,9 @@ class IndexPage extends ConsumerWidget {
                   String keyHash = await KakaoSdk.origin;
                   AppLogger.d('키 해시: $keyHash');
                 })),
-                Expanded(child: SquareTextButton("", () {})),
+                Expanded(child: SquareTextButton("home", () {
+                  AppRouter.goHome(context);
+                })),
               ],
             ),
             Row(

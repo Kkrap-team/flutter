@@ -5,7 +5,7 @@ import 'package:krap/common/styles/app_colors.dart';
 import 'package:krap/config/config.dart';
 import 'package:krap/core/navigation/route_paths.dart';
 import 'package:krap/feature/Login/presentation/pages/login_page.dart';
-import 'package:krap/feature/home/presentation/home_page.dart';
+import 'package:krap/feature/home/presentation/pages/home_page.dart';
 import 'package:krap/feature/tutorial/presentation/pages/tutorial_page.dart';
 import 'package:krap/feature/tutorial/provider/tutorial_viewmodel_provider.dart';
 import 'package:krap/index_page.dart';
