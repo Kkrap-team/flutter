@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:krap/common/dto/user_info.dart';
 import 'package:krap/common/provider/dio_provider.dart';
 import 'package:krap/feature/login/repository/login_api.dart';
 import 'package:krap/feature/login/repository/login_repository.dart';
@@ -16,6 +15,6 @@ final loginRepositoryProvider = Provider<LoginRepository>((ref) {
   return LoginRepositoryImpl(loginApi);
 });
 
-final loginViewModelProvider = AsyncNotifierProvider<LoginViewModel, UserInfo?>(
+final loginViewModelProvider = AsyncNotifierProvider<LoginViewModel, void>(
   LoginViewModel.new,
 );

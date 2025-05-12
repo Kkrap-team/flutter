@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:krap/common/dto/user_info.dart';
 import 'package:krap/common/styles/button_styles.dart';
 import 'package:krap/common/styles/text_styles.dart';
 import 'package:krap/common/widgets/loading_dialog.dart';
@@ -12,12 +11,12 @@ class LoginPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final viewModel = ref.read(loginViewModelProvider.notifier);
 
-    ref.listen<AsyncValue<UserInfo?>>(loginViewModelProvider, (prev, next) {
+    ref.listen<AsyncValue<void>>(loginViewModelProvider, (prev, next) {
       next.whenOrNull(
         loading: () {
           LoadingDialog.show(context);
         },
-        data: (userInfo) {
+        data: (_) {
           LoadingDialog.dismiss(context);
           AppRouter.replaceHome(context);
         },
@@ -58,7 +57,7 @@ class LoginPage extends ConsumerWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: viewModel.getLoginWithKakao,
+                  onPressed: viewModel.login,
                   style: ButtonStyles.kakaoButton,
                   child: Image.asset('assets/images/icon_kakao.png'),
                 ),
