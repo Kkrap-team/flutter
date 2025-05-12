@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:krap/common/provider/user_provider.dart';
 import 'package:krap/common/styles/app_colors.dart';
 
 class HomeAppBarActions extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final profileImage = ref.watch(userProvider).maybeWhen(
+      data: (user) => user?.profile ?? '',
+      orElse: () => '',
+    );
+
     return Row(
       spacing: 8,
       children: [
@@ -27,13 +33,13 @@ class HomeAppBarActions extends ConsumerWidget {
             ),
           ],
         ),
-        const CircleAvatar(
+        CircleAvatar(
           radius: 12,
           backgroundImage: NetworkImage(
-            'http://img1.kakaocdn.net/thumb/R640x640.q70/?fname=http://t1.kakaocdn.net/account_images/default_profile.jpeg',
+            profileImage,
           ),
         ),
-        const SizedBox(width: 12), // 좌우로 8만큼 공간
+        const SizedBox(width: 12),
         // Image.asset('assets/images/icon_search.png'),
       ],
     );
