@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:krap/common/provider/user_provider.dart';
 import 'package:krap/common/styles/app_colors.dart';
+import 'package:krap/core/util/app_logger.dart';
 
 class HomeAppBarActions extends ConsumerWidget {
   @override
@@ -10,6 +11,8 @@ class HomeAppBarActions extends ConsumerWidget {
       data: (user) => user?.profile ?? '',
       orElse: () => '',
     );
+
+    AppLogger.d("HomeAppBarActions profileImage = $profileImage");
 
     return Row(
       spacing: 8,

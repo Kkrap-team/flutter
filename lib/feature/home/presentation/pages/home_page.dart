@@ -6,6 +6,7 @@ import 'package:krap/core/util/extension.dart';
 import 'package:krap/feature/home/presentation/widgets/home_app_bar_actions.dart';
 import 'package:krap/feature/home/presentation/widgets/home_bottom_nav.dart';
 import 'package:krap/feature/home/provider/home_viewmodel_provider.dart';
+import 'package:krap/feature/home/tabs/folder/presentation/widgets/folder_tab.dart';
 import 'package:krap/feature/tutorial/presentation/widgets/tutorial_link.dart';
 
 class HomePage extends ConsumerStatefulWidget {
@@ -45,7 +46,16 @@ class _HomePageState extends ConsumerState<HomePage> {
               controller: controller,
               physics: const NeverScrollableScrollPhysics(),
               children: List.generate(4, (index) {
-                return TutorialLink();
+                switch (index) {
+                  case 0:
+                    return TutorialLink();
+                  case 1:
+                    return ForderTab();
+                  case 2:
+                    return TutorialLink();
+                  default:
+                    return TutorialLink();
+                }
               }),
             ),
           ],
