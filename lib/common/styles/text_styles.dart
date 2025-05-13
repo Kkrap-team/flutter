@@ -20,11 +20,41 @@ class TextStyles {
     fontWeight: FontWeight.w500,
     color: AppColor.AppColors.grey,
   );
+  static TextStyle regular12grey = const TextStyle(
+    fontFamily: 'NotoSans',
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: AppColor.AppColors.grey757575,
+  );
+  static TextStyle regular12black = const TextStyle(
+    fontFamily: 'NotoSans',
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: AppColor.AppColors.black,
+  );
+  static TextStyle regular12red = const TextStyle(
+    fontFamily: 'NotoSans',
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: AppColor.AppColors.red,
+  );
   static TextStyle bold12Black = const TextStyle(
     fontFamily: 'NotoSans',
     fontSize: 12,
     fontWeight: FontWeight.w700,
     color: AppColor.AppColors.black,
+  );
+  static TextStyle semiBold12Black = const TextStyle(
+    fontFamily: 'NotoSans',
+    fontSize: 12,
+    fontWeight: FontWeight.w600,
+    color: AppColor.AppColors.black,
+  );
+  static TextStyle semiBold12White = const TextStyle(
+    fontFamily: 'NotoSans',
+    fontSize: 12,
+    fontWeight: FontWeight.w600,
+    color: AppColor.AppColors.white,
   );
   static TextStyle semiBold14Black = const TextStyle(
     fontFamily: 'NotoSans',

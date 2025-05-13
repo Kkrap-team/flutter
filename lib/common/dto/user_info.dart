@@ -13,12 +13,12 @@ class UserInfo {
     required this.kakaoId,
   });
 
-  final num userId;
+  final int userId;
   final String email;
   final String nickname;
   final String profile;
   final String? bio;
-  final num kakaoId;
+  final int kakaoId;
 
   factory UserInfo.fromJson(Map<String, dynamic> json) =>
       _$UserInfoFromJson(json);
