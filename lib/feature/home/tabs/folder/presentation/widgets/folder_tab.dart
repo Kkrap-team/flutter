@@ -31,6 +31,7 @@ class _ForderTabState extends ConsumerState<ForderTab> {
     userId = ref
         .watch(userProvider)
         .maybeWhen(data: (user) => user?.userId ?? 0, orElse: () => 0);
+    viewModel = ref.read(folderViewModelProvider.notifier);
   }
 
   @override
@@ -40,7 +41,6 @@ class _ForderTabState extends ConsumerState<ForderTab> {
 
   @override
   Widget build(BuildContext context) {
-    viewModel = ref.read(folderViewModelProvider.notifier);
 
     ref.listen<AsyncValue<void>>(folderViewModelProvider, (prev, next) {
       next.whenOrNull(
