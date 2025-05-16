@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:krap/common/styles/app_colors.dart';
 import 'package:krap/common/styles/text_styles.dart';
 
-class TitleAppBar extends ConsumerWidget implements PreferredSizeWidget {
+class TitleAppBar extends StatelessWidget implements PreferredSizeWidget {
   const TitleAppBar({super.key, this.actions});
 
   final List<Widget>? actions;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
       backgroundColor: AppColors.white,
