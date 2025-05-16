@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:krap/common/styles/app_colors.dart';
 import 'package:krap/common/styles/text_styles.dart';
 
-class TutorialIndicator extends ConsumerWidget {
+class TutorialIndicator extends StatelessWidget {
   const TutorialIndicator({
     super.key,
     required this.currentIndex,
@@ -19,7 +18,7 @@ class TutorialIndicator extends ConsumerWidget {
   final VoidCallback goLogin;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Positioned(
       bottom: 40,
       left: 20,

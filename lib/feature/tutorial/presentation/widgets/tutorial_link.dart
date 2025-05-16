@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:krap/common/styles/text_styles.dart';
 
-class TutorialLink extends ConsumerWidget {
+class TutorialLink extends StatelessWidget {
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 68, 20, 0),
       child: Column(
