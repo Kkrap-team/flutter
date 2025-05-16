@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:krap/common/styles/text_styles.dart';
 
-class HomeBottomNav extends ConsumerWidget {
+class HomeBottomNav extends StatelessWidget {
   HomeBottomNav({
     super.key,
     required this.currentIndex,
@@ -15,7 +14,7 @@ class HomeBottomNav extends ConsumerWidget {
   final void Function(int) onTap;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final tabs = [
       _TabItem('홈', 'tab_home.png', 'tab_active_home.png'),
       _TabItem('보관함', 'tab_folder.png', 'tab_active_folder.png'),

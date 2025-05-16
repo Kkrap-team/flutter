@@ -29,9 +29,9 @@ class MyFolder extends ConsumerWidget {
   }
 }
 
-class FolderItem extends ConsumerWidget {
+class FolderItem extends StatelessWidget {
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Container(
       width: 168,
       child: Column(
@@ -79,9 +79,9 @@ class FolderItem extends ConsumerWidget {
   }
 }
 
-class _EmptyMyFolder extends ConsumerWidget {
+class _EmptyMyFolder extends StatelessWidget {
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Container(
       width: 168,
       child: Column(
