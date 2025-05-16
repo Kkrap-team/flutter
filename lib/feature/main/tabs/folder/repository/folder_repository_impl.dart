@@ -1,7 +1,7 @@
-import 'package:krap/feature/home/dto/create_folder_request.dart';
-import 'package:krap/feature/home/dto/create_folder_response.dart';
-import 'package:krap/feature/home/tabs/folder/repository/folder_api.dart';
-import 'package:krap/feature/home/tabs/folder/repository/folder_repository.dart';
+import 'package:krap/feature/main/dto/create_folder_request.dart';
+import 'package:krap/feature/main/dto/create_folder_response.dart';
+import 'package:krap/feature/main/tabs/folder/repository/folder_api.dart';
+import 'package:krap/feature/main/tabs/folder/repository/folder_repository.dart';
 
 class FolderRepositoryImpl implements FolderRepository {
   final FolderApi api;

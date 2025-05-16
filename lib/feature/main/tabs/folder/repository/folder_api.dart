@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:krap/feature/home/dto/create_folder_request.dart';
-import 'package:krap/feature/home/dto/create_folder_response.dart';
+import 'package:krap/feature/main/dto/create_folder_request.dart';
+import 'package:krap/feature/main/dto/create_folder_response.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'folder_api.g.dart';

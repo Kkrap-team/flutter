@@ -5,7 +5,7 @@ import 'package:krap/common/styles/app_colors.dart';
 import 'package:krap/config/config.dart';
 import 'package:krap/core/navigation/route_paths.dart';
 import 'package:krap/feature/Login/presentation/pages/login_page.dart';
-import 'package:krap/feature/home/presentation/pages/home_page.dart';
+import 'package:krap/feature/main/presentation/pages/main_page.dart';
 import 'package:krap/feature/tutorial/presentation/pages/tutorial_page.dart';
 import 'package:krap/feature/tutorial/provider/tutorial_viewmodel_provider.dart';
 import 'package:krap/index_page.dart';
@@ -38,7 +38,7 @@ void main() async {
           RoutePaths.index: (context) => IndexPage(),
           RoutePaths.tutorial: (context) => TutorialPage(),
           RoutePaths.login: (context) => LoginPage(),
-          RoutePaths.home: (context) => HomePage(),
+          RoutePaths.home: (context) => MainPage(),
         },
       ),
     ),
@@ -72,7 +72,7 @@ void main() async {
 //         // tested with just a hot reload.
 //         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
 //       ),
-//       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+//       main: const MyHomePage(title: 'Flutter Demo Home Page'),
 //     );
 //   }
 // }
@@ -80,7 +80,7 @@ void main() async {
 // // class MyHomePage extends StatefulWidget {
 // //   const MyHomePage({super.key, required this.title});
 // //
-// //   // This widget is the home page of your application. It is stateful, meaning
+// //   // This widget is the main page of your application. It is stateful, meaning
 // //   // that it has a State object (defined below) that contains fields that affect
 // //   // how it looks.
 // //

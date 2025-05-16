@@ -1,10 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:krap/common/provider/dio_provider.dart';
-import 'package:krap/feature/home/tabs/folder/repository/folder_api.dart';
-import 'package:krap/feature/home/tabs/folder/repository/folder_repository.dart';
-import 'package:krap/feature/home/tabs/folder/repository/folder_repository_impl.dart';
-import 'package:krap/feature/home/tabs/folder/usecase/create_folder_usecase.dart';
-import 'package:krap/feature/home/tabs/folder/viewmodel/folder_viewmodel.dart';
+import 'package:krap/feature/main/tabs/folder/repository/folder_api.dart';
+import 'package:krap/feature/main/tabs/folder/repository/folder_repository.dart';
+import 'package:krap/feature/main/tabs/folder/repository/folder_repository_impl.dart';
+import 'package:krap/feature/main/tabs/folder/usecase/create_folder_usecase.dart';
+import 'package:krap/feature/main/tabs/folder/viewmodel/folder_viewmodel.dart';
 
 final folderApiProvider = Provider<FolderApi>((ref) {
   final dio = ref.watch(dioProvider);

@@ -4,7 +4,7 @@ import 'package:krap/common/provider/user_provider.dart';
 import 'package:krap/common/styles/app_colors.dart';
 import 'package:krap/core/util/app_logger.dart';
 
-class HomeAppBarActions extends ConsumerWidget {
+class MainAppBarActions extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final profileImage = ref.watch(userProvider).maybeWhen(
@@ -12,7 +12,7 @@ class HomeAppBarActions extends ConsumerWidget {
       orElse: () => '',
     );
 
-    AppLogger.d("HomeAppBarActions profileImage = $profileImage");
+    AppLogger.d("MainAppBarActions profileImage = $profileImage");
 
     return Row(
       spacing: 8,

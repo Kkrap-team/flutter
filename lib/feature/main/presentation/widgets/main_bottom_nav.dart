@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:krap/common/styles/text_styles.dart';
 
-class HomeBottomNav extends StatelessWidget {
-  HomeBottomNav({
+class MainBottomNav extends StatelessWidget {
+  MainBottomNav({
     super.key,
     required this.currentIndex,
     required this.onTap,

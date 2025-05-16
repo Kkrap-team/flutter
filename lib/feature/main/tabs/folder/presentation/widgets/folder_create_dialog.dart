@@ -3,7 +3,7 @@ import 'package:krap/common/styles/button_styles.dart';
 import 'package:krap/common/styles/text_styles.dart';
 import 'package:krap/common/widgets/edit_text.dart';
 import 'package:krap/common/widgets/text_drop_down.dart';
-import 'package:krap/feature/home/dto/create_folder_request.dart';
+import 'package:krap/feature/main/dto/create_folder_request.dart';
 
 class FolderCreateDialog extends StatelessWidget {
   FolderCreateDialog(this.onCreate);

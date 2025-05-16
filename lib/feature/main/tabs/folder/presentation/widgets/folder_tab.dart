@@ -4,10 +4,10 @@ import 'package:krap/common/provider/user_provider.dart';
 import 'package:krap/common/styles/app_colors.dart';
 import 'package:krap/common/widgets/loading_dialog.dart';
 import 'package:krap/core/util/app_logger.dart';
-import 'package:krap/feature/home/tabs/folder/presentation/widgets/folder_create_dialog.dart';
-import 'package:krap/feature/home/tabs/folder/presentation/widgets/my_folder.dart';
-import 'package:krap/feature/home/tabs/folder/provider/folder_viewmodel_provider.dart';
-import 'package:krap/feature/home/tabs/folder/viewmodel/folder_viewmodel.dart';
+import 'package:krap/feature/main/tabs/folder/presentation/widgets/folder_create_dialog.dart';
+import 'package:krap/feature/main/tabs/folder/presentation/widgets/my_folder.dart';
+import 'package:krap/feature/main/tabs/folder/provider/folder_viewmodel_provider.dart';
+import 'package:krap/feature/main/tabs/folder/viewmodel/folder_viewmodel.dart';
 
 class ForderTab extends ConsumerStatefulWidget {
   const ForderTab({super.key});

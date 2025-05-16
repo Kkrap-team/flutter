@@ -1,5 +1,5 @@
-import 'package:krap/feature/home/dto/create_folder_request.dart';
-import 'package:krap/feature/home/dto/create_folder_response.dart';
+import 'package:krap/feature/main/dto/create_folder_request.dart';
+import 'package:krap/feature/main/dto/create_folder_response.dart';
 
 abstract class FolderRepository {
   Future<CreateFolderResponse> createFolder(

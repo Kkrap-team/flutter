@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class HomeViewModel extends StateNotifier<int> {
-  HomeViewModel({required int initIndex}) : super(0) {
+class MainViewModel extends StateNotifier<int> {
+  MainViewModel({required int initIndex}) : super(0) {
     state = initIndex;
   }
 

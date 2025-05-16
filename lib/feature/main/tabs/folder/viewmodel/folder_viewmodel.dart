@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:krap/core/util/app_logger.dart';
-import 'package:krap/feature/home/dto/create_folder_request.dart';
-import 'package:krap/feature/home/tabs/folder/provider/folder_viewmodel_provider.dart';
-import 'package:krap/feature/home/tabs/folder/usecase/create_folder_usecase.dart';
+import 'package:krap/feature/main/dto/create_folder_request.dart';
+import 'package:krap/feature/main/tabs/folder/provider/folder_viewmodel_provider.dart';
+import 'package:krap/feature/main/tabs/folder/usecase/create_folder_usecase.dart';
 
 class FolderViewModel extends AsyncNotifier<void> {
   late final CreateFolderUsecase _createFolderUsecase;

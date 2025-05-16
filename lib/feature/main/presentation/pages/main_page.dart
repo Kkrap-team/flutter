@@ -3,26 +3,26 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:krap/common/widgets/title_app_bar.dart';
 import 'package:krap/core/util/app_logger.dart';
 import 'package:krap/core/util/extension.dart';
-import 'package:krap/feature/home/presentation/widgets/home_app_bar_actions.dart';
-import 'package:krap/feature/home/presentation/widgets/home_bottom_nav.dart';
-import 'package:krap/feature/home/provider/home_viewmodel_provider.dart';
-import 'package:krap/feature/home/tabs/folder/presentation/widgets/folder_tab.dart';
+import 'package:krap/feature/main/presentation/widgets/main_app_bar_actions.dart';
+import 'package:krap/feature/main/presentation/widgets/main_bottom_nav.dart';
+import 'package:krap/feature/main/provider/main_viewmodel_provider.dart';
+import 'package:krap/feature/main/tabs/folder/presentation/widgets/folder_tab.dart';
 import 'package:krap/feature/tutorial/presentation/widgets/tutorial_link.dart';
 
-class HomePage extends ConsumerStatefulWidget {
-  const HomePage({super.key});
+class MainPage extends ConsumerStatefulWidget {
+  const MainPage({super.key});
 
   @override
-  ConsumerState<HomePage> createState() => _HomePageState();
+  ConsumerState<MainPage> createState() => _HomePageState();
 }
 
-class _HomePageState extends ConsumerState<HomePage> {
+class _HomePageState extends ConsumerState<MainPage> {
   late final PageController controller;
 
   @override
   void initState() {
     super.initState();
-    final index = ref.read(homeViewModelProvider);
+    final index = ref.read(mainViewModelProvider);
     controller = PageController(initialPage: index);
   }
 
@@ -34,12 +34,12 @@ class _HomePageState extends ConsumerState<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final pageIndex = ref.watch(homeViewModelProvider);
-    final viewModel = ref.read(homeViewModelProvider.notifier);
+    final pageIndex = ref.watch(mainViewModelProvider);
+    final viewModel = ref.read(mainViewModelProvider.notifier);
 
     return SafeArea(
       child: Scaffold(
-        appBar: TitleAppBar(actions: [HomeAppBarActions()]),
+        appBar: TitleAppBar(actions: [MainAppBarActions()]),
         body: Stack(
           children: [
             PageView(
@@ -60,11 +60,11 @@ class _HomePageState extends ConsumerState<HomePage> {
             ),
           ],
         ),
-        bottomNavigationBar: HomeBottomNav(
+        bottomNavigationBar: MainBottomNav(
           controller: controller,
           currentIndex: pageIndex,
           onTap: (index) {
-            AppLogger.d("jumpToPage $index");
+            AppLogger.d('++MainPage jumpToPage() index =  $index');
             controller.animateToPage(
               index,
               duration: 300.ms,
