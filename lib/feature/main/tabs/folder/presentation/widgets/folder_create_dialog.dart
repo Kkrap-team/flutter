@@ -12,6 +12,7 @@ class FolderCreateDialog extends StatelessWidget {
 
   final TextEditingController _titleController = TextEditingController();
   final TextEditingController _descController = TextEditingController();
+  static List<String> _textDropDownItem = ['공개', '비공개'];
   bool _selectPrivacy = true;
 
   @override
@@ -36,9 +37,9 @@ class FolderCreateDialog extends StatelessWidget {
                 Expanded(
                   flex: 1,
                   child: TextDropDown(
-                    items: ['공개', '비공개'],
+                    items: _textDropDownItem,
                     onChanged: (value) {
-                      _selectPrivacy = value == '공개';
+                      _selectPrivacy = _textDropDownItem[value] == '공개';
                     },
                   ),
                 ),
