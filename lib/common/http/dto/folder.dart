@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:krap/common/http/dto/link.dart';
 
 part 'folder.g.dart';
 
@@ -10,16 +11,16 @@ class Folder {
     required this.folderName,
     required this.folderDescription,
     required this.visible,
-    required this.eTime,
+    required this.createTime,
     required this.links,
   });
 
-  final num folderId;
+  final int folderId;
   final String folderName;
   final String folderDescription;
   final bool visible;
-  final String eTime;
-  final List<String> links;
+  final String createTime;
+  final List<Link> links;
 
   factory Folder.fromJson(Map<String, dynamic> json) =>
       _$FolderFromJson(json);
