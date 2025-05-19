@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:krap/common/provider/user_provider.dart';
+import 'package:krap/common/http/provider/user_provider.dart';
 import 'package:krap/common/styles/app_colors.dart';
 import 'package:krap/common/widgets/loading_dialog.dart';
 import 'package:krap/core/util/app_logger.dart';

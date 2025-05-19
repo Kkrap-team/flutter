@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:krap/common/provider/dio_provider.dart';
+import 'package:krap/common/http/provider/dio_provider.dart';
 import 'package:krap/feature/main/tabs/folder/repository/folder_api.dart';
 import 'package:krap/feature/main/tabs/folder/repository/folder_repository.dart';
 import 'package:krap/feature/main/tabs/folder/repository/folder_repository_impl.dart';
