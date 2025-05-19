@@ -7,6 +7,7 @@ import 'package:krap/feature/main/presentation/widgets/main_app_bar_actions.dart
 import 'package:krap/feature/main/presentation/widgets/main_bottom_nav.dart';
 import 'package:krap/feature/main/provider/main_viewmodel_provider.dart';
 import 'package:krap/feature/main/tabs/folder/presentation/widgets/folder_tab.dart';
+import 'package:krap/feature/main/tabs/home/presentation/widgets/home_tab.dart';
 import 'package:krap/feature/tutorial/presentation/widgets/tutorial_link.dart';
 
 class MainPage extends ConsumerStatefulWidget {
@@ -48,7 +49,7 @@ class _HomePageState extends ConsumerState<MainPage> {
               children: List.generate(4, (index) {
                 switch (index) {
                   case 0:
-                    return TutorialLink();
+                    return HomeTab();
                   case 1:
                     return ForderTab();
                   case 2:

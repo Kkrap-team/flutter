@@ -13,7 +13,8 @@ class Link{
      required this.thumbnailUrl,
      required this.faviconUrl,
 });
-  final num linkId;
+
+  final int linkId;
   final String linkUrl;
   final String createTime;
   final String linkName;
