@@ -6,16 +6,37 @@ class EditText extends StatelessWidget {
   EditText({
     super.key,
     this.isHighlight = false,
+    this.isOutLine = false,
     this.hintText = '',
     required this.controller,
   });
 
   final bool isHighlight;
+  final bool isOutLine;
   final String hintText;
   final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
+    final border =
+        isOutLine
+            ? const OutlineInputBorder(
+              borderSide: BorderSide(color: AppColors.grey757575, width: 1.5),
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+            )
+            : const UnderlineInputBorder(
+              borderSide: BorderSide(color: AppColors.grey757575, width: 1),
+            );
+    final focusedBolder =
+        isOutLine
+            ? const OutlineInputBorder(
+              borderSide: BorderSide(color: AppColors.grey757575, width: 1.5),
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+            )
+            : const UnderlineInputBorder(
+              borderSide: BorderSide(color: AppColors.grey757575, width: 1),
+            );
+
     return TextField(
       controller: controller,
       decoration: InputDecoration(
@@ -23,16 +44,12 @@ class EditText extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             if (isHighlight) Text('*', style: TextStyles.regular12red),
-            SizedBox(width: 4),
+            const SizedBox(width: 4),
             Text(hintText, style: TextStyles.regular12grey),
           ],
         ),
-        enabledBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: AppColors.grey757575),
-        ),
-        focusedBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: AppColors.black),
-        ),
+        border: border,
+        focusedBorder: focusedBolder,
       ),
     );
   }

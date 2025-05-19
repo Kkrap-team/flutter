@@ -28,4 +28,20 @@ class ButtonStyles {
       borderRadius: BorderRadius.circular(26),
     ),
   );
+  static final copyButton = OutlinedButton.styleFrom(
+    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 37),
+    minimumSize: const Size(60, 30),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(16),
+    ),
+  );
+
+  static final addButton = ElevatedButton.styleFrom(
+    backgroundColor: AppColors.primary,
+    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 37),
+    minimumSize: const Size(60, 30),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(26),
+    ),
+  );
 }
