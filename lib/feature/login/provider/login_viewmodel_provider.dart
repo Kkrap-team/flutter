@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:krap/common/provider/dio_provider.dart';
-import 'package:krap/feature/login/repository/login_api.dart';
-import 'package:krap/feature/login/repository/login_repository.dart';
-import 'package:krap/feature/login/repository/login_repository_impl.dart';
+import 'package:krap/common/http/provider/dio_provider.dart';
+import 'package:krap/common/http/repository/login/login_api.dart';
+import 'package:krap/common/http/repository/login/login_repository.dart';
+import 'package:krap/common/http/repository/login/login_repository_impl.dart';
 import 'package:krap/feature/login/viewmodel/login_viewmodel.dart';
 
 final loginApiProvider = Provider<LoginApi>((ref) {

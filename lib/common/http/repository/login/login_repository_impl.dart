@@ -1,7 +1,7 @@
-import 'package:krap/common/dto/user_info.dart';
+import 'package:krap/common/http/dto/user_info.dart';
+import 'package:krap/common/http/repository/login/login_api.dart';
+import 'package:krap/common/http/repository/login/login_repository.dart';
 import 'package:krap/feature/login/dto/login_request.dart';
-import 'package:krap/feature/login/repository/login_api.dart';
-import 'package:krap/feature/login/repository/login_repository.dart';
 
 class LoginRepositoryImpl implements LoginRepository {
   final LoginApi api;

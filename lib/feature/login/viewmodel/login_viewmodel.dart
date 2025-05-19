@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:krap/common/dto/user_info.dart';
-import 'package:krap/common/provider/user_provider.dart';
+import 'package:krap/common/http/dto/user_info.dart';
+import 'package:krap/common/http/provider/user_provider.dart';
 import 'package:krap/core/util/app_logger.dart';
 import 'package:krap/feature/login/usecase/login_with_kakao_usecase.dart';
 

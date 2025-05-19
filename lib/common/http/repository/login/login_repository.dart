@@ -1,4 +1,4 @@
-import 'package:krap/common/dto/user_info.dart';
+import 'package:krap/common/http/dto/user_info.dart';
 
 abstract class LoginRepository {
   Future<UserInfo> getUserInfo(String accessToken);
